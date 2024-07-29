@@ -1,0 +1,33 @@
+[
+    {
+      "rut": "1-9",
+      "name": "Pedro",
+      "surname": "Salas",
+      "registrationDate": "2024-07-12",
+      "address": "las vertientes 2024, macul, santiago",
+      "phone": "2218180",
+      "email": "pedro.salas@gmail.com",
+      "active": true
+    },
+    {
+      "rut": "2-7",
+      "name": "María",
+      "surname": "López",
+      "registrationDate": "2024-07-10",
+      "address": "avenida siempre viva 123, providencia, santiago",
+      "phone": "2233445",
+      "email": "maria.lopez@gmail.com",
+      "active": true
+    },
+    {
+      "rut": "3-5",
+      "name": "Juan",
+      "surname": "Pérez",
+      "registrationDate": "2024-07-09",
+      "address": "calle falsa 456, ñuñoa, santiago",
+      "phone": "2244556",
+      "email": "juan.perez@gmail.com",
+      "active": true
+    }
+  ]
+  

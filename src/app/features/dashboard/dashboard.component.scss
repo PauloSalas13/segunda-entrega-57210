@@ -1,0 +1,23 @@
+.example-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.example-sidenav-content {
+  height: 100%;
+}
+
+.example-sidenav {
+  padding: 20px;
+  width: 200px;
+  z-index: 1;
+}
+
+.example-toolbar {
+  z-index: 1;
+}
+
+.link-activo {
+  background-color: grey;
+}

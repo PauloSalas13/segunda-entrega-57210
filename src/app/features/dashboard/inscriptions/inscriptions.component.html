@@ -1,0 +1,86 @@
+<div>
+  <h2>Asignar Cursos a Estudiantes</h2>
+  <div class="tables-container">
+    <mat-card class="students-table">
+      <mat-card-title>Estudiantes</mat-card-title>
+      <div class="table-container">
+        <table mat-table [dataSource]="students" class="mat-elevation-z8">
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Nombre </th>
+            <td mat-cell *matCellDef="let student"> {{student.name}} </td>
+          </ng-container>
+          <ng-container matColumnDef="surname">
+            <th mat-header-cell *matHeaderCellDef> Apellido </th>
+            <td mat-cell *matCellDef="let student"> {{student.surname}} </td>
+          </ng-container>
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Acciones </th>
+            <td mat-cell *matCellDef="let student">
+              <button mat-button (click)="selectedStudent = student" [class.selected]="selectedStudent === student">
+                Seleccionar
+              </button>
+            </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="['name', 'surname', 'actions']"></tr>
+          <tr mat-row *matRowDef="let row; columns: ['name', 'surname', 'actions'];"></tr>
+        </table>
+      </div>
+    </mat-card>
+
+    <mat-card class="courses-table">
+      <mat-card-title>Cursos</mat-card-title>
+      <div class="table-container">
+        <table mat-table [dataSource]="courses" class="mat-elevation-z8">
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Nombre del Curso </th>
+            <td mat-cell *matCellDef="let course"> {{course.name}} </td>
+          </ng-container>
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Acciones </th>
+            <td mat-cell *matCellDef="let course">
+              <button mat-button (click)="toggleCourseSelection(course.id)" [class.selected]="selectedCourses.has(course.id)">
+                Seleccionar
+              </button>
+            </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="['name', 'actions']"></tr>
+          <tr mat-row *matRowDef="let row; columns: ['name', 'actions'];"></tr>
+        </table>
+      </div>
+    </mat-card>
+  </div>
+
+  <div class="actions">
+    <button mat-raised-button color="primary" (click)="assignCoursesToStudent()" [disabled]="!selectedStudent || selectedCourses.size === 0">
+      Asignar Cursos
+    </button>
+  </div>
+
+  <div *ngIf="loadingInscriptions">Cargando inscripciones...</div>
+  <div *ngIf="!loadingInscriptions">
+  <mat-card>
+    <mat-card-title>Inscripciones Realizadas</mat-card-title>
+    <div class="inscriptions-table-container">
+      <table mat-table [dataSource]="inscriptions" class="mat-elevation-z8">
+        <ng-container matColumnDef="studentName">
+          <th mat-header-cell *matHeaderCellDef> Estudiante </th>
+          <td mat-cell *matCellDef="let inscription"> {{getStudentName(inscription.studentId)}} </td>
+        </ng-container>
+        <ng-container matColumnDef="courseName">
+          <th mat-header-cell *matHeaderCellDef> Curso </th>
+          <td mat-cell *matCellDef="let inscription"> {{getCourseName(inscription.courseId)}} </td>
+        </ng-container>
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef> Acciones </th>
+          <td mat-cell *matCellDef="let inscription">
+            <button mat-icon-button color="warn" (click)="deleteInscription(inscription)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="['studentName', 'courseName', 'actions']"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['studentName', 'courseName', 'actions'];"></tr>
+      </table>
+    </div>
+  </mat-card>
+</div>

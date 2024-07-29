@@ -1,0 +1,29 @@
+.tables-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.students-table, .courses-table {
+  width: 45%;
+  
+  .table-container {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+}
+
+.selected {
+  background-color: #d3d3d3;
+}
+
+.actions {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.inscriptions-table-container {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+  

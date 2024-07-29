@@ -1,0 +1,18 @@
+[
+    {
+      "studentId": "1-9",
+      "courseId": "1",
+      "date": "2024-07-15T10:00:00Z"
+    },
+    {
+      "studentId": "2-7",
+      "courseId": "2",
+      "date": "2024-07-16T11:00:00Z"
+    },
+    {
+      "studentId": "3-5",
+      "courseId": "3",
+      "date": "2024-07-17T12:00:00Z"
+    }
+  ]
+  

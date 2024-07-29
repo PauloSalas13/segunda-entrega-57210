@@ -1,0 +1,19 @@
+import { Course } from '../../features/dashboard/courses/models';
+
+export function generateId(length: number) {
+  let result = '';
+  const characters =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const charactersLength = characters.length;
+  let counter = 0;
+  while (counter < length) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    counter += 1;
+  }
+  return result;
+}
+
+export function generateSequentialId(courses: Course[]): string {
+  const maxId = courses.reduce((max, course) => Math.max(max, parseInt(course.id)), 0);
+  return (maxId + 1).toString();
+}

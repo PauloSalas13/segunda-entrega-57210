@@ -1,0 +1,10 @@
+<div *ngIf="courseDetail$ | async as details">
+  <h2>{{ details.course?.name }}</h2>
+
+  <p *ngIf="details.inscriptions.length === 0" [appHighlightNoStudents]="true">
+    No tiene alumnos inscritos
+  </p>
+
+  <p *ngIf="details.inscriptions.length > 0" [innerHTML]="details.course | courseDetail:details.inscriptions:details.students">
+  </p>
+</div>

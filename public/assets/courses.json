@@ -1,0 +1,39 @@
+[
+    {
+      "id": "1",
+      "name": "Introducción a la Programación",
+      "startDate": "2022-01-01T00:00:00Z",
+      "endDate": "2022-12-31T23:59:59Z"
+    },
+    {
+      "id": "2",
+      "name": "Historia del Arte",
+      "startDate": "2022-01-01T00:00:00Z",
+      "endDate": "2022-12-31T23:59:59Z"
+    },
+    {
+      "id": "3",
+      "name": "Matemáticas Avanzadas",
+      "startDate": "2022-01-01T00:00:00Z",
+      "endDate": "2022-12-31T23:59:59Z"
+    },
+    {
+      "id": "4",
+      "name": "Física Cuántica",
+      "startDate": "2022-01-01T00:00:00Z",
+      "endDate": "2022-12-31T23:59:59Z"
+    },
+    {
+      "id": "5",
+      "name": "Literatura Moderna",
+      "startDate": "2022-01-01T00:00:00Z",
+      "endDate": "2022-12-31T23:59:59Z"
+    },
+    {
+      "id": "6",
+      "name": "Biología Molecular",
+      "startDate": "2022-01-01T00:00:00Z",
+      "endDate": "2022-12-31T23:59:59Z"
+    }
+  ]
+  

@@ -7,9 +7,17 @@ import { SharedModule } from '../../../shared/shared.module';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [StudentsComponent],
-  imports: [CommonModule, StudentsRoutingModule, SharedModule, MatButtonModule, MatDatepickerModule, MatDialogModule],
+  imports: [
+    CommonModule, 
+    StudentsRoutingModule, 
+    SharedModule, 
+    MatButtonModule, 
+    MatDatepickerModule, 
+    MatDialogModule,
+    ReactiveFormsModule],
 })
 export class StudentsModule {}

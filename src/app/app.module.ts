@@ -11,9 +11,10 @@ import { CoreModule } from './core/core.module';
 import { StudentsModule } from './features/dashboard/students/students.module';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +25,10 @@ import { HttpClientModule } from '@angular/common/http';
     StudentsModule,
     HttpClientModule
   ],
-  providers: [provideAnimationsAsync(), provideNativeDateAdapter()],
+  providers: [
+    provideAnimationsAsync(), 
+    provideNativeDateAdapter(),
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

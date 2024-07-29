@@ -63,6 +63,8 @@
           <mat-form-field class="w-full">
             <mat-label>RUT</mat-label>
             <input formControlName="rut" matInput />
+            <mat-error *ngIf="studentForm?.get('rut')?.hasError('invalidRut')">RUT inválido</mat-error>
+            <mat-error *ngIf="studentForm?.get('rut')?.hasError('invalidRutFormat')">Formato de RUT inválido</mat-error>
           </mat-form-field>
         </div>
         <div class="col-6">
@@ -95,6 +97,7 @@
           <mat-form-field class="w-full">
             <mat-label>Teléfono</mat-label>
             <input formControlName="phone" matInput />
+            <mat-error *ngIf="studentForm?.get('phone')?.hasError('invalidPhone')">Teléfono inválido</mat-error>
           </mat-form-field>
         </div>
         <div class="col-6">

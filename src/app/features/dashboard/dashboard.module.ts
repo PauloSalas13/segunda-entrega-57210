@@ -17,7 +17,6 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
 import { DialogOkComponent } from './mensajes/dialogOk/dialogOk.component';
 
-
 @NgModule({
   declarations: [
     DashboardComponent, 
@@ -39,7 +38,7 @@ import { DialogOkComponent } from './mensajes/dialogOk/dialogOk.component';
     MatButtonModule,
     MatIconModule,
     MatCheckboxModule,
-    MatCardModule,
+    MatCardModule
   ],
 })
 export class DashboardModule {}

@@ -6,6 +6,7 @@ import { ConfirmationDialogComponent } from '../mensajes/confirmation-dialog/con
 import { Student } from './models';
 import { ChangeDetectorRef } from '@angular/core';
 import { ErrorDialogComponent } from '../mensajes/error-dialog/error-dialog.component';
+import { CustomValidators } from '../../../shared/utils/custom-validators';
 
 @Component({
   selector: 'app-students',
@@ -28,13 +29,13 @@ export class StudentsComponent implements OnInit {
     private changeDetectorRef: ChangeDetectorRef
   ) {
     this.studentForm = this.fb.group({
-      rut: [null, [Validators.required]],
-      name: [null, [Validators.required]],
-      surname: [null, [Validators.required]],
+      rut: [null, [Validators.required, CustomValidators.rutValidator()]],
+      name: [null, [Validators.required, CustomValidators.maxLengthValidator(50)]],
+      surname: [null, [Validators.required, CustomValidators.maxLengthValidator(50)]],
       registrationDate: [null, [Validators.required]],
-      address: [null, [Validators.required]],
-      phone: [null, [Validators.required]],
-      email: [null, [Validators.required]],
+      address: [null, [Validators.required, CustomValidators.maxLengthValidator(100)]],
+      phone: [null, [Validators.required, CustomValidators.phoneValidator()]],
+      email: [null, [Validators.required, Validators.email]],
       active: [false],
     });
   }
